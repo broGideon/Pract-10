@@ -1,0 +1,17 @@
+D:\my project\Pract-10\Pract-10\bin\Debug\net7.0\Pract-10.exe
+D:\my project\Pract-10\Pract-10\bin\Debug\net7.0\Pract-10.deps.json
+D:\my project\Pract-10\Pract-10\bin\Debug\net7.0\Pract-10.runtimeconfig.json
+D:\my project\Pract-10\Pract-10\bin\Debug\net7.0\Pract-10.dll
+D:\my project\Pract-10\Pract-10\bin\Debug\net7.0\Pract-10.pdb
+D:\my project\Pract-10\Pract-10\obj\Debug\net7.0\Pract-10.GeneratedMSBuildEditorConfig.editorconfig
+D:\my project\Pract-10\Pract-10\obj\Debug\net7.0\Pract-10.AssemblyInfoInputs.cache
+D:\my project\Pract-10\Pract-10\obj\Debug\net7.0\Pract-10.AssemblyInfo.cs
+D:\my project\Pract-10\Pract-10\obj\Debug\net7.0\Pract-10.csproj.CoreCompileInputs.cache
+D:\my project\Pract-10\Pract-10\obj\Debug\net7.0\Pract-10.dll
+D:\my project\Pract-10\Pract-10\obj\Debug\net7.0\refint\Pract-10.dll
+D:\my project\Pract-10\Pract-10\obj\Debug\net7.0\Pract-10.pdb
+D:\my project\Pract-10\Pract-10\obj\Debug\net7.0\Pract-10.genruntimeconfig.cache
+D:\my project\Pract-10\Pract-10\obj\Debug\net7.0\ref\Pract-10.dll
+D:\my project\Pract-10\Pract-10\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\my project\Pract-10\Pract-10\obj\Debug\net7.0\Pract-10.csproj.AssemblyReference.cache
+D:\my project\Pract-10\Pract-10\obj\Debug\net7.0\Pract-10.csproj.CopyComplete
