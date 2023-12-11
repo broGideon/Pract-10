@@ -9,10 +9,29 @@ class Program
     static void Main(string[] args)
     {
         Console.OutputEncoding = Encoding.UTF8;
-        /*Admin admin = new Admin();
-        admin.UseAdmin();*/
-        /* HR hr = new HR();
-         hr.UseHR();*/
+        string file = "User.json";
+        List<User> users = SerDeser.Deserialize<User>(file);
+        Boolean proverka = false;
+        foreach (User user in users)
+        {
+            if (user.Role == 0) proverka = true;
+        }
+        int ID = 0;
+        foreach (var user in users)
+        {
+            if (ID != user.ID) break;
+            else ID++;
+        }
+        if (proverka == false)
+        {
+            User user = new User();
+            user.ID = ID;
+            user.Login = "admin";
+            user.Password = "admin";
+            user.Role = 0;
+            users.Add(user);
+            SerDeser.Serialize<List<User>>(users, file);
+        }
         Autorization.Vxod();
     }
 }
@@ -119,6 +138,14 @@ static public class Autorization
                 }
                 Console.SetCursorPosition(0, 5);
                 Console.WriteLine("Неверный логин или пароль");
+                Console.SetCursorPosition(9, 2);
+                Console.WriteLine("                                                           "); 
+                Console.SetCursorPosition(10, 3);
+                Console.WriteLine("                                                           ");
+                login = "";
+                posLogin = 9;
+                posPassword = 10;
+                password = "";
             }
         } while (possition != (int)Knopochka.Escape);
         Process.GetCurrentProcess().Kill();

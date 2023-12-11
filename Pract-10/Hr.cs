@@ -157,9 +157,9 @@ namespace Pract_10
                 }
                 else if (possition == 8)
                 {
-                    Console.SetCursorPosition(11, 8);
+                    Console.SetCursorPosition(13, 8);
                     Console.WriteLine("                           ");
-                    Console.SetCursorPosition(11, 8);
+                    Console.SetCursorPosition(13, 8);
                     post = Console.ReadLine();
                 }
                 else if (possition == 9)
@@ -368,9 +368,9 @@ namespace Pract_10
                 }
                 else if (possition == 8)
                 {
-                    Console.SetCursorPosition(11, 10);
+                    Console.SetCursorPosition(13, 8);
                     Console.WriteLine("                           ");
-                    Console.SetCursorPosition(11, 10);
+                    Console.SetCursorPosition(13, 8);
                     employees[pos].Post = Console.ReadLine();
                 }
                 else if (possition == 9)
@@ -568,11 +568,11 @@ namespace Pract_10
         private int OutputEmployee(List<Employee> employees)
         {
             Console.SetCursorPosition(0, 2);
-            Console.WriteLine($"\tID\t\tФамилия\t\tИмя\t\tОтчество\t\tДолжность");
+            Console.WriteLine($"\tID\tФамилия\t\tИмя\t\tОтчество\tДолжность");
             int i = 0;
             foreach (var employee in employees)
             {
-                Console.WriteLine($"\t{employee.ID}\t\t{employee.Surname}\t\t{employee.FirstName}\t\t{employee.MiddleName}\t\t{employee.Post}");
+                Console.WriteLine($"\t{employee.ID}\t{employee.Surname}\t{employee.FirstName}\t\t{employee.MiddleName}\t{employee.Post}");
                 i++;
             }
 
