@@ -27,14 +27,10 @@ namespace Pract_10
             {
                 if (item.Login == login) ID = item.ID;
             }
-            try
+            foreach (var item in employees)
             {
-                foreach (var item in employees)
-                {
-                    if (item.User_ID == ID) name = item.FirstName;
-                }
+                if (item.User_ID == ID) name = item.FirstName;
             }
-            catch { }
             if (name == "") name = login;
             Name = name;
         }
@@ -215,8 +211,6 @@ namespace Pract_10
                     List<Employee> employees = SerDeser.Deserialize<Employee>(file);
                     Boolean proverka = true;
                     Boolean proverka2 = true;
-                    try
-                    {
                     foreach (var item in employees)
                     {
                         if (item.User_ID == user_ID && user_ID != -1) proverka2 = false;
@@ -225,8 +219,6 @@ namespace Pract_10
                     {
                         if (item.ID == ID) proverka = false;
                     }
-                    }
-                    catch { }
                     if (proverka == true && proverka2 == true)
                     {
                         employees.Add(employee);
@@ -578,11 +570,11 @@ namespace Pract_10
             Console.SetCursorPosition(0, 2);
             Console.WriteLine($"\tID\t\tФамилия\t\tИмя\t\tОтчество\t\tДолжность");
             int i = 0;
-                foreach (var employee in employees)
-                {
-                    Console.WriteLine($"\t{employee.ID}\t\t{employee.Surname}\t\t{employee.FirstName}\t\t{employee.MiddleName}\t\t{employee.Post}");
-                    i++;
-                }
+            foreach (var employee in employees)
+            {
+                Console.WriteLine($"\t{employee.ID}\t\t{employee.Surname}\t\t{employee.FirstName}\t\t{employee.MiddleName}\t\t{employee.Post}");
+                i++;
+            }
 
             return i;
         }

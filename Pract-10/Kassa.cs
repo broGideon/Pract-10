@@ -22,14 +22,10 @@ namespace Pract_10
             {
                 if (item.Login == login) ID = item.ID;
             }
-            try
+            foreach (var item in employees)
             {
-                foreach (var item in employees)
-                {
-                    if (item.User_ID == ID) name = item.FirstName;
-                }
+                if (item.User_ID == ID) name = item.FirstName;
             }
-            catch { }
             if (name == "") name = login;
             Name = name;
         }
@@ -150,7 +146,7 @@ namespace Pract_10
                     {
                         UseKassa();
                     }
-                } while ( key.Key != ConsoleKey.Escape);
+                } while (key.Key != ConsoleKey.Escape);
             }
             catch
             {
@@ -167,7 +163,7 @@ namespace Pract_10
             SerDeser.Serialize<List<SelectedProduct>>(selectProductss, fileSelectedProduct);
             List<Product> products = SerDeser.Deserialize<Product>(fileProduct);
             int i = 0;
-            foreach (var item in products) 
+            foreach (var item in products)
             {
                 item.Colvo -= selectProducts[i].ViborColvo;
                 i++;
@@ -175,7 +171,7 @@ namespace Pract_10
             SerDeser.Serialize<List<Product>>(products, fileProduct);
             List<Buh> buhs = SerDeser.Deserialize<Buh>(fileBuh);
             int ID = 0;
-            foreach(var item in buhs)
+            foreach (var item in buhs)
             {
                 if (ID != item.ID) break;
                 else ID++;

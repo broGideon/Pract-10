@@ -22,14 +22,10 @@ namespace Pract_10
             {
                 if (item.Login == login) ID = item.ID;
             }
-            try
+            foreach (var item in employees)
             {
-                foreach (var item in employees)
-                {
-                    if (item.User_ID == ID) name = item.FirstName;
-                }
+                if (item.User_ID == ID) name = item.FirstName;
             }
-            catch { }
             if (name == "") name = login;
             Name = name;
         }

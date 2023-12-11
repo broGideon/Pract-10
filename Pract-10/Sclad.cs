@@ -22,14 +22,10 @@ namespace Pract_10
             {
                 if (item.Login == login) ID = item.ID;
             }
-            try
+            foreach (var item in employees)
             {
-                foreach (var item in employees)
-                {
-                    if (item.User_ID == ID) name = item.FirstName;
-                }
+                if (item.User_ID == ID) name = item.FirstName;
             }
-            catch { }
             if (name == "") name = login;
             Name = name;
         }
@@ -148,14 +144,10 @@ namespace Pract_10
                     else product.Colvo = 0;
                     List<Product> products = SerDeser.Deserialize<Product>(file);
                     Boolean proverka = true;
-                    try
+                    foreach (var item in products)
                     {
-                        foreach (var item in products)
-                        {
-                            if (item.ID == ID) proverka = false;
-                        }
+                        if (item.ID == ID) proverka = false;
                     }
-                    catch { }
                     if (proverka == true)
                     {
                         products.Add(product);
