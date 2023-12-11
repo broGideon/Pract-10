@@ -41,8 +41,8 @@ namespace Pract_10
             Console.WriteLine("+ - Добавить товар");
             Console.SetCursorPosition(90, 4);
             Console.WriteLine("- - Убрать товар");
-            Console.SetCursorPosition(90, 4);
-            Console.WriteLine("- - Убрать товар");
+            Console.SetCursorPosition(90, 5);
+            Console.WriteLine("Esc - Вернуться обратно");
             return;
         }
         private void MenuKnopochek2()
