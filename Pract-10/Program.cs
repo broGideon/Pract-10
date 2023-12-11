@@ -112,7 +112,8 @@ static public class Autorization
                         }
                         else if (user.Role == 4)
                         {
-
+                            Kassa kassa = new Kassa(login); 
+                            kassa.UseKassa();
                         }
                     }
                 }

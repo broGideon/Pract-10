@@ -369,7 +369,7 @@ namespace Pract_10
                     Console.Clear();
                     Menushka();
                     MenuKnopochek1();
-                    int i = OutputUsers(sorted);
+                    int i = OutputBuh(sorted);
                     if (i != 0)
                     {
                         do
@@ -414,7 +414,7 @@ namespace Pract_10
             } while (possition != (int)Knopochka.Escape);
             UseAccountant();
         }
-        private int OutputUsers(List<Buh> buhs)
+        private int OutputBuh(List<Buh> buhs)
         {
             Console.SetCursorPosition(0, 2);
             Console.WriteLine("\tID\t\tСумма\t\tВремя записи\t\tПрибавка?");
@@ -423,7 +423,8 @@ namespace Pract_10
             foreach (var item in buhs)
             {
                 Console.WriteLine($"\t{item.ID}\t\t{item.Sum}\t\t{item.Date}\t\t{item.Operation}");
-                sum += item.Sum;
+                if (item.Operation == true) sum += item.Sum;
+                else sum -= item.Sum;
                 i++;
             }
             Console.WriteLine($"------------------------------------------------------------------------------------------\n\t\t\t\t\tИтоговая сумма: {sum}");
@@ -434,10 +435,10 @@ namespace Pract_10
             Console.Clear();
             Menushka();
             MenuKnopochek1();
-            string file = "Product.json";
+            string file = "Accountant.json";
             List<Buh> buhs = SerDeser.Deserialize<Buh>(file);
             Console.SetCursorPosition(0, 2);
-            int i = OutputUsers(buhs);
+            int i = OutputBuh(buhs);
             if (i == 0) i = 1;
             int possition;
             do

@@ -360,7 +360,7 @@ namespace Pract_10
                     Console.Clear();
                     Menushka();
                     MenuKnopochek1();
-                    int i = OutputUsers(sorted);
+                    int i = OutputProduct(sorted);
                     if (i != 0)
                     {
                         do
@@ -405,7 +405,7 @@ namespace Pract_10
             } while (possition != (int)Knopochka.Escape);
             UseSclad();
         }
-        private int OutputUsers(List<Product> products)
+        private int OutputProduct(List<Product> products)
         {
             Console.SetCursorPosition(0, 2);
             Console.WriteLine("\tID\t\tНазвание\tЦена за штуку\tКол-во на складе");
@@ -425,7 +425,7 @@ namespace Pract_10
             string file = "Product.json";
             List<Product> products = SerDeser.Deserialize<Product>(file);
             Console.SetCursorPosition(0, 2);
-            int i = OutputUsers(products);
+            int i = OutputProduct(products);
             if (i == 0) i = 1;
             int possition;
             do

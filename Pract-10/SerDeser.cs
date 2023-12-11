@@ -22,8 +22,9 @@ namespace Pract_10
             {
                 string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 string json = File.ReadAllText(path + "\\" + file);
-                List<T> obj = JsonConvert.DeserializeObject<List<T>> (json);
-                return obj;
+                List<T> obj = JsonConvert.DeserializeObject<List<T>>(json);
+                if (obj != null) return obj;
+                else return new List<T>();
             }
             catch
             {

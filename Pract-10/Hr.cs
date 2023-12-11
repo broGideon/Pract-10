@@ -161,9 +161,9 @@ namespace Pract_10
                 }
                 else if (possition == 8)
                 {
-                    Console.SetCursorPosition(11, 10);
+                    Console.SetCursorPosition(11, 8);
                     Console.WriteLine("                           ");
-                    Console.SetCursorPosition(11, 10);
+                    Console.SetCursorPosition(11, 8);
                     post = Console.ReadLine();
                 }
                 else if (possition == 9)
@@ -578,15 +578,12 @@ namespace Pract_10
             Console.SetCursorPosition(0, 2);
             Console.WriteLine($"\tID\t\tФамилия\t\tИмя\t\tОтчество\t\tДолжность");
             int i = 0;
-            try
-            {
                 foreach (var employee in employees)
                 {
                     Console.WriteLine($"\t{employee.ID}\t\t{employee.Surname}\t\t{employee.FirstName}\t\t{employee.MiddleName}\t\t{employee.Post}");
                     i++;
                 }
-            }
-            catch { }
+
             return i;
         }
         public void UseHR()
