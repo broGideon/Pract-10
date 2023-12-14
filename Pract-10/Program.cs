@@ -116,23 +116,23 @@ static public class Autorization
                         }
                         else if (user.Role == 1)
                         {
+                            Kassa kassa = new Kassa(login); 
+                            kassa.UseKassa();
+                        }
+                        else if (user.Role == 2)
+                        {
                             HR hr = new HR(login);
                             hr.UseHR();
                         }
-                        else if (user.Role == 2)
+                        else if (user.Role == 3)
                         {
                             Sclad sclad = new Sclad(login);
                             sclad.UseSclad();
                         }
-                        else if (user.Role == 3)
+                        else if (user.Role == 4)
                         {
                             Accountant accountant = new Accountant(login);
                             accountant.UseAccountant();
-                        }
-                        else if (user.Role == 4)
-                        {
-                            Kassa kassa = new Kassa(login); 
-                            kassa.UseKassa();
                         }
                     }
                 }
